@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220608 21:52:58.375" rpa="false" schemaversion="3">
+<suite id="s1" name="Buscar" source="C:\GravidadeZero\amazon_zup\tests\buscar.robot">
+<test id="s1-t1" name="Deve buscar um novo Produto" line="12">
+<kw name="Start Session" library="base" type="SETUP">
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<arg>slowMo=00:00:05</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20220608 21:53:00.298" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 5000.0, "tracesDir": "C:\\GravidadeZero\\amazon_zup\\logs\\browser\\traces\\3cd640a9-20d6-4e85-a41c-a4d3630b4eec"}</msg>
+<msg timestamp="20220608 21:53:02.162" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":5000,"tracesDir":"C:\\GravidadeZero\\amazon_zup\\logs\\browser\\traces\\3cd640a9-20d6-4e85-a41c-a4d3630b4eec"}</msg>
+<status status="PASS" starttime="20220608 21:53:00.298" endtime="20220608 21:53:02.162"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://www.amazon.com.br/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20220608 21:53:12.832" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg timestamp="20220608 21:53:12.834" level="FAIL">TimeoutError: page.goto: Timeout 10000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com.br/", waiting until "load"
+============================================================</msg>
+<status status="FAIL" starttime="20220608 21:53:02.162" endtime="20220608 21:53:12.839"/>
+</kw>
+<status status="FAIL" starttime="20220608 21:53:00.297" endtime="20220608 21:53:12.840"/>
+</kw>
+<kw name="End Session" library="base" type="TEARDOWN">
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20220608 21:53:12.849" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg timestamp="20220608 21:53:12.851" level="FAIL">Error: Tried to take screenshot, but no page was open.</msg>
+<status status="FAIL" starttime="20220608 21:53:12.841" endtime="20220608 21:53:12.853"/>
+</kw>
+<status status="FAIL" starttime="20220608 21:53:12.841" endtime="20220608 21:53:12.854">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<tag>happy</tag>
+<status status="FAIL" starttime="20220608 21:53:00.293" endtime="20220608 21:53:12.855">Setup failed:
+TimeoutError: page.goto: Timeout 10000ms exceeded.
+=========================== logs ===========================
+navigating to "https://www.amazon.com.br/", waiting until "load"
+============================================================
+
+Also teardown failed:
+Error: Tried to take screenshot, but no page was open.</status>
+</test>
+<doc>Suite de teste para buscar novo produto</doc>
+<status status="FAIL" starttime="20220608 21:52:58.377" endtime="20220608 21:53:13.334"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">happy</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Buscar">Buscar</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220608 21:53:12.832" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg timestamp="20220608 21:53:12.849" level="WARN">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+</errors>
+</robot>
